@@ -1,0 +1,19 @@
+1. Open the Project in Visual Studio.
+2. Make sure to have the below packages installed:
+            "Microsoft.EntityFrameworkCore.Design" Version="6.0.3"
+            "Pomelo.EntityFrameworkCore.MySql" Version="6.0.1"(In case you are using MySQL server otherwise install the package of the server that you are using.
+            "Swashbuckle.AspNetCore" Version="6.2.3"
+3. Ensure that the connection string in the appsettings.json file is pointing to your MySQL server or if you are using sql make sure the file is pointing at SQL server.
+4. Add migrations and update the database.
+5. Run the application.
+6. Once the application is running, open a web browser and navigate to the Swagger UI by entering the following URL: https://localhost:5001/swagger/index.html, if it is not automaticly open in the browser.
+7. In the Swagger UI, you should see a list of available endpoints under the "Customer" section. Click on each endpoint to expand it and view its details.
+8. To test an endpoint, click on the "Try it out" button, enter any required parameters or input data, and click the "Execute" button.
+   8.1. POST Add Customer:
+          Need to update First name, Last name, and email. There is no need to make any changes to the Id, even if you make it does not affect the API.
+   8.2. GET Get a list of all Customers.
+   8.3. GET Get a Customer by using the id.
+   8.4. DELETE Delete a Customer By using the Id.
+   8.5 PUT Update a Customer by updating his properties.
+9. The response from the endpoint will be displayed below the "Execute" button. If the response is successful, it will be displayed in green with a status code of 200. If the response is unsuccessful, it will be displayed in red with a status code of 4xx or 5xx, along with an error message.
+NOTE:DBContext that is required in the task is called MyContext.
